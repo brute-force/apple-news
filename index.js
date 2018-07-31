@@ -94,6 +94,18 @@ module.exports = function (config) {
         : '/sections/' + sectionId + '/articles';
 
       makeRequest('GET', endpoint, {}, cb);
+    },
+    alertArticle: function (opts, cb) {
+      assert(Object(opts) === opts, 'opts required');
+      assert(typeof cb === 'function', 'cb required');
+      assert(typeof opts.articleId === 'string', 'opts.articleId required');
+      assert(Object(opts.alertsBody) === opts.alertsBody, 'opts.alertsBody required');
+      var articleId = opts.articleId;
+      var fd = createArticleUploadFormData(opts.articleBody);
+
+      makeRequest('POST', '/articles/' + articleId + '/notifications', {
+        formData: fd
+      }, cb);
     }
   };
 };
