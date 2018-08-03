@@ -68,6 +68,11 @@ module.exports = function (config) {
       var bundleFiles = opts.bundleFiles || [];
       var meta = articleMetadataFromOpts(opts);
       meta.revision = opts.revision;
+
+      console.log(JSON.stringify(bundleFiles, null, 2));
+      console.log('meta data:');
+      console.log(JSON.stringify(meta, null, 2));
+
       var fd = createArticleUploadFormData(opts.article, bundleFiles, meta);
 
       makeRequest('POST', '/articles/' + articleId, {
@@ -99,7 +104,7 @@ module.exports = function (config) {
       assert(Object(opts) === opts, 'opts required');
       assert(typeof cb === 'function', 'cb required');
       assert(typeof opts.articleId === 'string', 'opts.articleId required');
-      assert(Object(opts.alertsBody) === opts.alertsBody, 'opts.alertsBody required');
+      assert(Object(opts.alertBody) === opts.alertBody, 'opts.alertBody required');
       var articleId = opts.articleId;
       var fd = createArticleUploadFormData(opts.articleBody);
 
