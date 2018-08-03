@@ -68,9 +68,6 @@ module.exports = function (config) {
       var bundleFiles = opts.bundleFiles || [];
       var meta = articleMetadataFromOpts(opts);
       meta.revision = opts.revision;
-      meta = {
-        data: meta
-      };
 
       console.log(JSON.stringify(bundleFiles, null, 2));
       console.log('meta data:');
