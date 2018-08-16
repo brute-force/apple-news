@@ -106,10 +106,9 @@ module.exports = function (config) {
       assert(typeof opts.articleId === 'string', 'opts.articleId required');
       assert(Object(opts.alertBody) === opts.alertBody, 'opts.alertBody required');
       var articleId = opts.articleId;
-      var fd = createArticleUploadFormData(opts.alertBody);
 
       makeRequest('POST', '/articles/' + articleId + '/notifications', {
-        formData: fd
+        formData: opts.alertBody
       }, cb);
     }
   };
