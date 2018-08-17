@@ -69,10 +69,6 @@ module.exports = function (config) {
       var meta = articleMetadataFromOpts(opts);
       meta.revision = opts.revision;
 
-      console.log(JSON.stringify(bundleFiles, null, 2));
-      console.log('meta data:');
-      console.log(JSON.stringify(meta, null, 2));
-
       var fd = createArticleUploadFormData(opts.article, bundleFiles, meta);
 
       makeRequest('POST', '/articles/' + articleId, {
