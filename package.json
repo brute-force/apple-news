@@ -1,6 +1,6 @@
 {
   "name": "@brute-force/apple-news",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Node.js client for Apple News API",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micnews/apple-news.git"
+    "url": "git+https://github.com/brute-force/apple-news.git"
   },
   "author": "mic.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/micnews/apple-news/issues"
+    "url": "https://github.com/brute-force/apple-news/issues"
   },
-  "homepage": "https://github.com/micnews/apple-news#readme",
+  "homepage": "https://github.com/brute-force/apple-news#readme",
   "devDependencies": {
     "async": "^2.6.1",
     "eslint": "^4.19.1",
