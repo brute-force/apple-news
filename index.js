@@ -68,6 +68,7 @@ module.exports = function (config) {
       var bundleFiles = opts.bundleFiles || [];
       var meta = articleMetadataFromOpts(opts);
       meta.revision = opts.revision;
+
       var fd = createArticleUploadFormData(opts.article, bundleFiles, meta);
 
       makeRequest('POST', '/articles/' + articleId, {
@@ -99,12 +100,11 @@ module.exports = function (config) {
       assert(Object(opts) === opts, 'opts required');
       assert(typeof cb === 'function', 'cb required');
       assert(typeof opts.articleId === 'string', 'opts.articleId required');
-      assert(Object(opts.alertsBody) === opts.alertsBody, 'opts.alertsBody required');
+      assert(Object(opts.alertBody) === opts.alertBody, 'opts.alertBody required');
       var articleId = opts.articleId;
-      var fd = createArticleUploadFormData(opts.articleBody);
 
       makeRequest('POST', '/articles/' + articleId + '/notifications', {
-        formData: fd
+        formData: opts.alertBody
       }, cb);
     }
   };
