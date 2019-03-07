@@ -1,6 +1,6 @@
 {
   "name": "@brute-force/apple-news",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Node.js client for Apple News API",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "nyc": "^8.3.0",
-    "pem": "^1.12.5",
+    "pem": "^1.14.2",
     "tape": "^4.9.1"
   },
   "dependencies": {
