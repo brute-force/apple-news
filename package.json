@@ -1,6 +1,6 @@
 {
   "name": "@brute-force/apple-news",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Node.js client for Apple News API",
   "main": "index.js",
   "scripts": {
@@ -19,23 +19,23 @@
   },
   "homepage": "https://github.com/brute-force/apple-news#readme",
   "devDependencies": {
-    "async": "^2.6.1",
+    "async": "^2.6.2",
     "eslint": "^4.19.1",
     "eslint-config-semistandard": "^11.0.0",
     "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "nyc": "^8.3.0",
     "pem": "^1.14.2",
-    "tape": "^4.9.1"
+    "tape": "^4.10.1"
   },
   "dependencies": {
     "eachy": "^1.0.5",
     "file-type": "^3.8.0",
-    "form-data": "^2.3.2",
-    "moment": "^2.22.2",
+    "form-data": "^2.3.3",
+    "moment": "^2.24.0",
     "object-assign": "^4.0.1",
     "request": "^2.88.0",
     "safe-buffer": "^5.1.2"
